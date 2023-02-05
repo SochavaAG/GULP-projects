@@ -182,7 +182,7 @@ function fontWoff2() {
 // удаление каталога build
 function clear() {
   //return src(paths.root, {read: false})
-  return src(paths.root, { allowEmpty: false })
+  return src(paths.root, { allowEmpty: true })
     .pipe(rimraf());
 }
 

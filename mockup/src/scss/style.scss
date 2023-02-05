@@ -1,4 +1,41 @@
-@import 'reset';
+@import 'base/mixins';
 
-@import 'main';
+@import 'common';
 
+
+@include font('Poppins', 'Poppins-Bold', 'bold', 'normal');
+@include font('Poppins', 'Poppins-Medium', '500', 'normal');
+@include font('Poppins', 'Poppins-Regular', '400', 'normal');
+@include font('Poppins', 'Poppins-SemiBold', '600', 'normal');
+
+.ag-format-container {
+  width: 1181px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 90%;
+  }
+
+}
+
+@media only screen and (max-width: 639px) {
+  .ag-format-container {
+    width: 86%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+
+}
+
+@media (min-width: 980px) and (max-width: 1180px) {
+  .ag-format-container {
+    width: 960px;
+  }
+
+}
