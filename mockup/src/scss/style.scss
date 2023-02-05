@@ -3,17 +3,36 @@
 @import 'common';
 
 
-@include font('Poppins', 'Poppins-Bold', 'bold', 'normal');
-@include font('Poppins', 'Poppins-Medium', '500', 'normal');
-@include font('Poppins', 'Poppins-Regular', '400', 'normal');
-@include font('Poppins', 'Poppins-SemiBold', '600', 'normal');
+@include font(#{$fontFamily}, #{$fontFamily}-Bold, bold);
+@include font(#{$fontFamily}, #{$fontFamily}-Medium, 500);
+@include font(#{$fontFamily}, #{$fontFamily}-Regular);
+@include font(#{$fontFamily}, #{$fontFamily}-SemiBold, 600);
+
+input,
+button,
+textarea {
+  font-family: $fontFamily, sans-serif;
+  font-size: inherit;
+}
+
+** {
+  @include x-placeholder {
+    color: $colorTextPlaceholder;
+  }
+}
+
+body {
+  font-family: $fontFamily, sans-serif;
+  font-size: $fontSize;
+  color: $color;
+}
 
 .ag-format-container {
-  width: 1181px;
+  width: $containerWidthDesktop;
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: ($maxWidthMobile - 1) + px) {
   .ag-format-container {
     width: 90%;
   }
@@ -24,18 +43,24 @@
   .ag-format-container {
     width: 86%;
   }
+
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media only screen and (max-width: 479px) {
+
+
+}
+
+@media (min-width: $maxWidthMobile + px) and (max-width: $maxWidthTable + px) {
   .ag-format-container {
-    width: 750px;
+    width: ($maxWidthMobile - 20) + px;
   }
 
 }
 
-@media (min-width: 980px) and (max-width: 1180px) {
+@media (min-width: ($maxWidthTable - 1) + px) and (max-width: ($containerWidthDesktop - 1 ) + px) {
   .ag-format-container {
-    width: 960px;
+    width: ($maxWidthTable - 20) + px;
   }
 
 }

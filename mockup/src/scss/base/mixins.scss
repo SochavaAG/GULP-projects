@@ -1,5 +1,5 @@
-//Подключение шрифта
-@mixin font($font_name, $file_name, $weight, $style) {
+// Подключение шрифта
+@mixin font($font_name, $file_name, $weight: normal, $style: normal) {
   @font-face {
     font-family: $font_name;
     src: url(../fonts/#{$file_name}/#{$file_name}.eot);
@@ -11,5 +11,36 @@
     font-weight: #{$weight};
     font-style: #{$style};
     font-display: swap;
+  }
+}
+
+// Percent
+@function percent($px, $from) {
+  $result: math.div($px, $from) * 100%;
+  @return $result;
+}
+
+// REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
+
+// EM
+@function em($px, $current: 16) {
+  $result: math.div($px, $current) + em;
+  @return $result;
+}
+
+// Generates `placeholder` content for a given element.
+@mixin x-placeholder {
+  &::-webkit-input-placeholder {
+    @content // Chrome, Safari, Opera
+  }
+  &::-moz-placeholder {
+    @content // Firefox 19+
+  }
+  &:-ms-input-placeholder {
+    @content // IE 10+
   }
 }
