@@ -43,14 +43,14 @@ const paths = {
   src: {
     html: 'src/**.html',
     js: 'src/js/**.js',
-    css: 'src/scss/**.scss',
+    css: 'src/scss/*.scss',
     img: 'src/images/',
     fonts: 'src/fonts/'
   },
   watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
-    css: 'src/scss/**/*.scss',
+    css: 'src/scss/*.scss',
     img: 'src/images/**/*.*',
     fonts: 'srs/fonts/**/*.*'
   },

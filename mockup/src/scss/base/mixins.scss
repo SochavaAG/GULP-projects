@@ -44,3 +44,18 @@
     @content // IE 10+
   }
 }
+
+// SVG icon
+@mixin svg-icon($color: false, $width: false, $height: $width) {
+  display: inline-block;
+  @if ($width) {
+    width: $width;
+  }
+  @if ($height) {
+    height: $height;
+  }
+
+  @if $color {
+    fill: $color;
+  }
+}

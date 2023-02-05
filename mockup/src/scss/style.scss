@@ -1,12 +1,12 @@
+// add mixins
 @import 'base/mixins';
 
-@import 'common';
+// add variables
+@import 'base/common';
 
+// add fonts
+@import 'base/fonts';
 
-@include font(#{$fontFamily}, #{$fontFamily}-Bold, bold);
-@include font(#{$fontFamily}, #{$fontFamily}-Medium, 500);
-@include font(#{$fontFamily}, #{$fontFamily}-Regular);
-@include font(#{$fontFamily}, #{$fontFamily}-SemiBold, 600);
 
 input,
 button,
@@ -27,10 +27,29 @@ body {
   color: $color;
 }
 
+a {
+
+  @media (any-hover: hover) {
+    &:hover {
+    }
+  }
+}
+
 .ag-format-container {
-  width: $containerWidthDesktop;
+  width: $containerWidthDesktop + px;
   margin: 0 auto;
 }
+
+// add blocks
+@import 'common/header';
+
+@import 'common/menu';
+
+@import 'page-blocks/about/main';
+
+@import 'common/footer';
+// /add blocks
+
 
 @media only screen and (max-width: ($maxWidthMobile - 1) + px) {
   .ag-format-container {
