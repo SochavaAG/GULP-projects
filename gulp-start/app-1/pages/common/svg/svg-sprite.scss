@@ -1,0 +1,43 @@
+.svg-search_btn {
+  height: 18px;
+  width: 18px;
+
+  stroke: #5A5858;
+  fill: transparent;
+
+  .ag-header-search_btn:hover & {
+    stroke: #FFF;
+  }
+}
+
+.svg-arrow {
+  height: 4px;
+  width: 8px;
+  margin: -2px 0 0;
+
+  stroke: #FFF;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.svg-login {
+  height: 16px;
+  width: 14px;
+  margin: 0 5px -2px 0;
+
+  stroke: #FFF;
+
+  .ag-login_link:hover & {
+    stroke: #5A5858;
+  }
+}
+
+.svg-star {
+  height: 16px;
+  width: 16px;
+  margin: 0 auto;
+
+  stroke: #FFF;
+}

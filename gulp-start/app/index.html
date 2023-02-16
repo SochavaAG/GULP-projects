@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+@@include('page-components/common/head/head.html', {
+'title': 'Gulp Start'
+})
+
+<body>
+<div class="ag-mockup-page">
+  @@include('page-components/common/header/header.html')
+
+  <div class="ag-format-container">
+    <h1 class="ag-title">Title Home Page</h1>
+  </div>
+
+  @@include('page-components/common/svg-sprite/svg-sprite.html')
+
+  @@include('page-components/common/footer/footer.html')
+
+  @@include('page-components/common/style-script/style-script.html', {
+    'script': 'footer'
+  })
+</div>
+</body>
+</html>

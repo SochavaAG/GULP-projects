@@ -1,0 +1,20 @@
+@import 'base/_mixins';
+@import 'base/_vars';
+
+@import 'base/_main';
+
+@import 'base/_fonts';
+@import 'base/_grid';
+
+@import '../components/main';
+
+// add blocks
+@import '../pages/common/header/header';
+
+@import '../pages/common/menu/menu';
+@import '../pages/common/svg/svg-sprite';
+
+@import '../pages/other/main';
+
+@import '../pages/common/footer/footer';
+// /add blocks

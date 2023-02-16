@@ -1,0 +1,73 @@
+.ag-header {
+  padding: 14px 0;
+  background-color: #1C1819;
+
+  &_info {
+    display: flex;
+
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
+  }
+
+  &_col {
+    &__left {
+      display: flex;
+
+      flex-direction: row;
+
+      flex-wrap: nowrap;
+
+      align-items: center;
+    }
+
+    &__right {
+      display: flex;
+
+      flex-direction: row;
+
+      flex-wrap: nowrap;
+
+      align-items: center;
+    }
+  }
+
+  .ag-header-search {
+    &_form {
+      margin: 0 0 0 40px;
+
+      position: relative;
+    }
+    &_input {
+      height: 42px;
+      max-width: 400px;
+      width: 100%;
+      padding: 0 10px 0 55px;
+      border: 0 none;
+      background-color: #000;
+
+      outline: none;
+
+      color: #FFF;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      box-sizing: border-box;
+
+      border-radius: 10px;
+    }
+    &_btn {
+      margin: -14px 0 0;
+      padding: 5px;
+      border: 0 none;
+      background: transparent;
+
+      position: absolute;
+      top: 50%;
+      left: 15px;
+    }
+  }
+}
