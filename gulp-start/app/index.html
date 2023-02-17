@@ -6,25 +6,659 @@
 <html lang="ru">
 <!--<![endif]-->
 
-@@include('page-components/common/head/head.html', {
+@@include('./page-components/common/head/head.html', {
 'title': 'Gulp Start'
 })
 
 <body>
-<div class="ag-mockup-page">
-  @@include('page-components/common/header/header.html')
+<div class="js-babe-page ag-babe-page">
+  @@include('./page-components/common/header/header.html')
 
-  <div class="ag-format-container">
-    <h1 class="ag-title">Title Home Page</h1>
+  @@include('./page-components/common/filter/filter.html')
+
+  <div class="ag-content">
+    <div class="ag-format-container">
+      <div class="ag-content-top_box">
+        <div class="js-filter_btn ag-base_btn ag-filter_btn">
+          <svg class="svg-filter">
+            <use xlink:href="#ag-filter"></use>
+          </svg>
+
+          Filters
+        </div>
+
+        <div class="ag-tag_box">
+          <div class="ag-tag_title">
+            Popular tags:
+          </div>
+
+          <div class="js-tag_list ag-tag_list searches">
+            <div class="ag-tag_item">
+              <a href="#">Women</a>
+            </div>
+            <div class="ag-tag_item">
+              <a href="#">Latino</a>
+            </div>
+            <div class="ag-tag_item">
+              <a href="#">Heterosexual</a>
+            </div>
+            <div class="ag-tag_item">
+              <a href="#">Blonde</a>
+            </div>
+          </div>
+        </div>
+
+        <ul class="js-grid-btn_box ag-grid-btn_box">
+          <li id="large" class="ag-grid-btn_item js-ag-grid-btn_item__active">
+            <svg class="svg-grid svg-grid-4">
+              <use xlink:href="#ag-grid-4"></use>
+            </svg>
+          </li>
+          <li id="medium" class="ag-grid-btn_item">
+            <svg class="svg-grid svg-grid-9">
+              <use xlink:href="#ag-grid-9"></use>
+            </svg>
+          </li>
+          <li id="small" class="ag-grid-btn_item">
+            <svg class="svg-grid svg-grid-16">
+              <use xlink:href="#ag-grid-16"></use>
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+      <ul class="js-ag-grid_list ag-grid_list js-ag-grid_list__large">
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-1.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-2.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English, Spanish-French-Italian-NL</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-3.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-4.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English, Spanish-French-Italian-NL</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-5.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-6.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-7.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-8.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-9.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-10.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-11.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-12.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-13.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-14.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-15.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-16.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-17.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-18.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-1.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-2.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-3.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-4.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-5.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-6.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-7.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-8.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-9.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-10.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-11.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-12.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-13.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-14.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-15.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-16.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-17.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+        <li class="ag-grid_item">
+          <a href="#" class="ag-girl_link">
+            <span class="ag-girl_media">
+              <img src="images/webp/img-18.png" class="ag-girl_img lazyloaded" width="320" height="240" title="Gabymendoza - sexcam" alt="Gabymendoza - sexcam"/>
+            </span>
+          </a>
+          <div class="ag-girl_descr">
+            <a href="#" class="ag-girl-descr_link" title="See GabyMendoza's profile">
+              <span class="ag-girl-descr_name">GabyMendoza</span>
+              <span class="ag-girl-descr_wrap">
+                <span class="ag-girl-descr_lang">I speak English</span>
+                <span class="ag-girl-descr_price">5&#160;cr/min</span>
+              </span>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <a href="#" class="ag-base_btn ag-girl-more_btn">More</a>
+    </div>
   </div>
 
-  @@include('page-components/common/svg-sprite/svg-sprite.html')
+  @@include('./page-components/common/footer/footer.html')
 
-  @@include('page-components/common/footer/footer.html')
+  @@include('./page-components/common/svg-sprite-custom/svg-sprite-custom.html')
 
-  @@include('page-components/common/style-script/style-script.html', {
+  @@include('./page-components/common/style-script/style-script.html', {
     'script': 'footer'
   })
 </div>
+
+@@include('./page-components/common/popup/popup.html')
 </body>
 </html>

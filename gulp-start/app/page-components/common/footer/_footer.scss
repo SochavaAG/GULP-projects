@@ -1,0 +1,166 @@
+.ag-format-container__footer {
+  width: 1220px;
+}
+.ag-footer {
+  background-color: #1C1819;
+
+  &-top {
+    &_box {
+      padding: 40px 0;
+      border-bottom: 1px solid #272425;
+    }
+    &_list {
+      text-align: center;
+    }
+    &_item {
+      display: inline-block;
+      margin: 0 30px;
+
+      &-title {
+        display: inline-block;
+        margin: 0 16px 0 0;
+
+        vertical-align: middle;
+      }
+    }
+    &_img {
+      display: inline-block;
+
+      vertical-align: middle;
+    }
+  }
+
+  &-middle {
+    &_box {
+      padding: 20px 0;
+      border-bottom: 1px solid #272425;
+    }
+    &_title {
+      padding: 0 0 5px;
+
+      font-weight: normal;
+      font-size: 24px;
+    }
+    &_text {
+      padding: 0 0 12px;
+
+      font-size: 12px;
+    }
+  }
+
+  &-bottom {
+    &_box {
+      padding: 40px 0;
+
+      text-align: center;
+    }
+    &_title {
+      padding: 0 0 10px;
+
+      font-weight: 900;
+      font-size: 18px;
+    }
+    &_tagline {
+      padding: 0 0 20px;
+
+      font-size: 12px;
+    }
+
+    &_list {
+      display: inline-block;
+      padding: 10px 0;
+
+      &-title {
+        display: inline-block;
+
+        color: #5A5858;
+      }
+    }
+    &_item {
+      display: inline-block;
+      padding: 0 10px;
+      border-right: 1px solid #302A2B;
+
+      &:last-child {
+        border: 0 none;
+      }
+
+      a {
+        color: #ACAAAA;
+      }
+    }
+  }
+
+  &-search {
+    &_form {
+      display: table;
+      margin: 0 auto 30px;
+    }
+    &_row {
+      min-height: 60px;
+
+      position: relative;
+    }
+    &_input {
+      height: 44px;
+      max-width: 400px;
+      width: 100%;
+      padding: 0 112px 0 20px;
+      border: 0 none;
+      background-color: #131011;
+
+      outline: none;
+
+      color: #FFF;
+
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      box-sizing: border-box;
+
+      border-radius: 10px;
+    }
+    &_btn {
+      height: 42px;
+      padding: 0 25px;
+      border: 1px solid #E4285B;
+      background-color: #E4285B;
+
+      font-weight: 500;
+      color: #FFF;
+
+      box-sizing: border-box;
+
+      border-radius: 0 10px 10px 0;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:hover {
+        border: 1px solid #F82B60;
+        background-color: #F82B60;
+      }
+    }
+  }
+}
+
+.js-ag-footer-middle {
+  &_title {
+    display: table;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    position: relative;
+  }
+
+  &_descr {
+    display: none;
+
+    text-align: center;
+  }
+}

@@ -1,8 +1,130 @@
-<header id="js-header" class="ag-header">
+<header class="ag-header">
   <div class="ag-format-container">
+    <div class="ag-header_info">
+      <div class="ag-header_col__left">
+        <a href="/" class="ag-logo_link">
+          <img src="images/logo.svg" alt="xxxbabes4u">
+        </a>
 
-    <a href="/" class="ag-logo_link">
-      <img src="images/logo.png" class="ag-logo_img" alt="Logo"/>
-    </a>
+        <form class="ag-header-search_form" action="#" method="post">
+          <input class="ag-header-search_input" type="text" name="search[header]" maxlength="20" placeholder="Search" value=""/>
+
+          <button class="ag-header-search_btn" type="submit">
+            <svg class="svg-search_btn">
+              <use xlink:href="#ag-search_btn"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="js-ag-nav_bars">
+        <div class="ag-nav-bars_icons"></div>
+      </div>
+
+      <div class="js-nav ag-header_col__right">
+        <div class="js-nav_btn-close ag-nav_btn-close"></div>
+
+        <a href="#" class="ag-help_link">Need some help?</a>
+
+        <div class="ag-user_box">
+          <div class="ag-credit_box">
+            <div class="ag-credit_btn"></div>
+
+            <span class="ag-credit_text">Credits <span class="ag-credit_count">0</span></span>
+          </div>
+
+          <div class="ag-profile_box">
+            <div class="js-profile_current ag-profile_current">
+              Martin
+
+              <svg class="svg-arrow">
+                <use xlink:href="#ag-arrow"></use>
+              </svg>
+            </div>
+
+            <ul class="js-profile_list ag-profile_list">
+              <li class="ag-profile_item">
+                <a href="/profile" class="ag-profile_link">My account</a>
+              </li>
+              <li class="ag-profile_item">
+                <a href="/faq" class="ag-profile_link">Support/FAQ</a>
+              </li>
+              <li class="ag-profile_item">
+                <a href="/logout" class="ag-profile_link">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!--
+                  <div class="ag-login_box">
+                    <a href="/login" class="js-popup_btn ag-login_link">
+                      <svg class="svg-login">
+                        <use xlink:href="#ag-login"></use>
+                      </svg>
+
+                      Login
+                    </a>
+                  </div>
+        -->
+        <div class="ag-nav_box">
+          <ul class="ag-nav_list">
+            <li class="ag-nav_item">
+              <a href="#" class="ag-nav_link">
+                <svg class="svg-star">
+                  <use xlink:href="#ag-star"></use>
+                </svg>
+
+                <span class="ag-nav_num">2</span>
+              </a>
+            </li>
+            <li class="ag-nav_item">
+              <a href="#" class="ag-nav_link">
+                <svg class="svg-clock">
+                  <use xlink:href="#ag-clock"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="ag-nav_item">
+              <a href="#" class="ag-nav_link">
+                <svg class="svg-message">
+                  <use xlink:href="#ag-message"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="ag-lang_box">
+          <div class="js-lang_current ag-lang_current">
+            En
+
+            <svg class="svg-arrow">
+              <use xlink:href="#ag-arrow"></use>
+            </svg>
+          </div>
+
+          <ul class="js-lang_list ag-lang_list">
+            <li class="ag-lang_item">
+              <a href="/fr/" class="ag-lang_link">Français</a>
+            </li>
+            <li class="ag-lang_item">
+              <a href="/it/" class="ag-lang_link">Italiano</a>
+            </li>
+            <li class="ag-lang_item">
+              <a href="/es/" class="ag-lang_link">Español</a>
+            </li>
+            <li class="ag-lang_item">
+              <a href="/de/" class="ag-lang_link">Deutsch</a>
+            </li>
+            <li class="ag-lang_item">
+              <a href="/nl/" class="ag-lang_link">Nederlands</a>
+            </li>
+            <li class="ag-lang_item">
+              <a href="/pt/" class="ag-lang_link">Português</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

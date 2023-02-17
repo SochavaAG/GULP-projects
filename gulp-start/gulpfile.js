@@ -62,6 +62,7 @@ const paths = {
     css: 'build/css/',
     img: 'build/images/',
     fonts: 'build/fonts/',
+    lib: 'build/plugins/',
     zip: 'zip'
   },
   app: {
@@ -70,7 +71,8 @@ const paths = {
     js: 'app/js/*.js',
     css: 'app/**/*.scss',
     img: 'app/images/',
-    fonts: 'app/fonts/'
+    fonts: 'app/fonts/',
+    lib: 'app/plugins/'
   },
   watch: {
     html: 'app/**/*.html',
@@ -87,7 +89,8 @@ function templates() {
   return src(paths.app.html)
     .pipe(plumber())
     .pipe(include({
-      prefix: '@@'
+      prefix: '@@',
+      basepath: '@file'
     }))
     .pipe(htmlmin({
       collapseWhitespace: true
@@ -140,10 +143,20 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+// обработка плагинов CSS, JS
+function pluginsLib() {
+  return src([paths.app.lib + '**/*.js', paths.app.lib + '**/*.css'])
+    .pipe(plumber())
+    .pipe(changed(paths.build.lib))
+    .pipe(dest(paths.build.lib))
+    .pipe(browserSync.stream());
+}
+
 // обработка картинок
 function images() {
-  return src(paths.app.img + '**/*.+(png|jpg|jpeg|gif|ico|svg)')
+  return src(paths.app.img + '**/*.+(png|jpg|jpeg|gif|ico|svg|webp)')
     .pipe(plumber())
+    .pipe(changed(paths.build.img))
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -362,8 +375,8 @@ function serve() {
   });
 
   watch(paths.watch.html, series(templates));
-  watch(paths.watch.css, series(styles));
-  watch(paths.watch.js, series(scripts));
+  watch(paths.watch.css, series(styles, pluginsLib));
+  watch(paths.watch.js, series(scripts, pluginsLib));
   watch(paths.watch.fonts, series(fonts));
   watch(paths.watch.img, series(images, webpImg)).on('change', browserSync.reload);
 }
@@ -383,8 +396,8 @@ exports.svg = series(clearSpriteSVG, spriteSVG); // задача для гене
 exports.zip = series(zip); // задача для архивации файлов для прода // gulp zip
 
 
-exports.build = series(clearAll, templates, styles, scripts, images, fonts); // Задача для единоразовой сборки проекта // gulp build
-exports.serve = series(clearAll, templates, styles, scripts, images, fonts, serve); // Задача с постоянным слежением за изменениями в проекте // gulp serve
+exports.build = series(clearAll, templates, styles, scripts, pluginsLib, images, fonts); // Задача для единоразовой сборки проекта // gulp build
+exports.serve = series(clearAll, templates, styles, scripts, pluginsLib, images, fonts, serve); // Задача с постоянным слежением за изменениями в проекте // gulp serve
 
-exports.fast = series(clear, templates, styles, scripts, images); // Задача с постоянным слежением за изменениями в проекте без лишнего для скорости // gulp fast
-exports.fastserve = series(clear, templates, styles, scripts, images, serve); // Задача с постоянным слежением за изменениями в проекте без лишнего для скорости // gulp fastserve
+exports.fast = series(clear, templates, styles, scripts, pluginsLib, images); // Задача с постоянным слежением за изменениями в проекте без лишнего для скорости // gulp fast
+exports.fastserve = series(clear, templates, styles, scripts, pluginsLib, images, serve); // Задача с постоянным слежением за изменениями в проекте без лишнего для скорости // gulp fastserve

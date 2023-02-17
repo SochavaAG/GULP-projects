@@ -43,6 +43,7 @@
       if (e.keyCode == 27 && $('.js-filter').is(':visible')) {
         $('.js-babe-page').removeClass('js-babe-page_filter_open');
         $('.js-filter').removeClass('js-ag-filter_open');
+        $('html, body').removeClass('js-ag-body-noscroll');
       }
     });
 
@@ -50,6 +51,7 @@
       if ((!$('.js-filter').is(e.target) && $('.js-filter').has(e.target).length === 0)) {
         $('.js-babe-page').removeClass('js-babe-page_filter_open');
         $('.js-filter').removeClass('js-ag-filter_open');
+        $('html, body').removeClass('js-ag-body-noscroll');
       }
     });
     /* /filter */
@@ -75,6 +77,7 @@
       if (e.keyCode == 27 && $('.js-nav').is(':visible')) {
         $('.js-babe-page').removeClass('js-babe-page_nav__open');
         $('.js-nav').removeClass('js-ag-nav_open');
+        $('html, body').removeClass('js-ag-body-noscroll');
       }
     });
 
@@ -82,6 +85,7 @@
       if ((!$('.js-nav').is(e.target) && $('.js-nav').has(e.target).length === 0)) {
         $('.js-babe-page').removeClass('js-babe-page_nav__open');
         $('.js-nav').removeClass('js-ag-nav_open');
+        $('html, body').removeClass('js-ag-body-noscroll');
       }
     });
     /* /nav */

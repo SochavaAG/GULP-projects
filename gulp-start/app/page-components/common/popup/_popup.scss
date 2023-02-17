@@ -1,0 +1,262 @@
+.js-ag-body-noscroll {
+  overflow: hidden;
+}
+.js-ag-popup_overlay {
+  display: none;
+  background-color: rgba(0,0,0,.75);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity .4s, visibility .4s;
+
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &__open {
+    display: block;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition: opacity .3s, visibility .3s;
+  }
+}
+
+.ag-popup-form {
+  &_box {
+    max-width: 400px;
+    width: 100%;
+    margin: -250px auto 0;
+    padding: 30px 60px;
+    background: rgba(255, 255, 255, .1);
+
+    box-shadow: 0 4px 60px rgba(0, 0, 0, .5);
+
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+
+    overflow-y: auto;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+  }
+
+  &_btn {
+    height: 42px;
+    line-height: 40px;
+    width: 100%;
+
+    &-close {
+      height: 18px;
+      width: 22px;
+
+      cursor: pointer;
+
+      vertical-align: middle;
+
+      -webkit-tap-highlight-color: transparent;
+
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      &::before {
+        content: "";
+        height: 1px;
+        width: 20px;
+        background: #FFF;
+
+        transform: translateY(8px) rotate(45deg);
+
+        transition: all 0.3s ease-in-out;
+
+        position: absolute;
+      }
+      &:hover::before {
+        transform: translateY(8px) rotate(135deg);
+      }
+      &::after {
+        content: "";
+        height: 1px;
+        width: 20px;
+        background: #FFF;
+
+        transform: translateY(8px) rotate(-45deg);
+
+        transition: all 0.3s ease-in-out;
+
+        position: absolute;
+
+      }
+      &:hover::after {
+        transform: translateY(8px) rotate(-135deg);
+      }
+    }
+  }
+
+  &_title {
+    padding: 0 0 30px;
+
+    text-align: center;
+    font-size: 24px;
+  }
+  &_row {
+    min-height: 56px;
+
+    position: relative;
+  }
+  &_input {
+    height: 42px;
+    line-height: 42px;
+    width: 100%;
+    padding: 0 20px;
+    border: 1px solid #131011;
+    background: #131011;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    outline: none;
+
+    font-family: $fontFamily, sans-serif;
+    font-size: 14px;
+    color: #A4A3A3;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    &__pass {
+      padding: 0 75px 0 20px;
+    }
+  }
+
+  &_divide {
+    padding: 12px 0;
+
+    text-transform: uppercase;
+    text-align: center;
+    color: #5A5858;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      height: 1px;
+      background-color: #5A5858;
+
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: calc(50% + 15px);
+    }
+    &::after {
+      content: "";
+      height: 1px;
+      background-color: #5A5858;
+
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 15px);
+      right: 0;
+    }
+  }
+
+  &_btn {
+    &__gl {
+      display: block;
+      height: 42px;
+      line-height: 42px;
+      margin: 0 0 15px;
+      border: 1px solid #FFF;
+      background-color: #FFF;
+
+      color: #131011;
+
+      &:hover {
+        border: 1px solid #d7d7d7;
+        background-color: #d7d7d7;
+      }
+    }
+
+    &__guest {
+      display: block;
+      height: 42px;
+      line-height: 42px;
+      margin: 0 0 15px;
+      border: 1px solid #FFF;
+      background-color: #FFF;
+
+      color: #131011;
+
+      &:hover {
+        border: 1px solid #d7d7d7;
+        background-color: #d7d7d7;
+      }
+    }
+  }
+
+  &_link {
+    color: #E4285B;
+
+    &-wrap {
+      padding: 0 0 15px;
+
+      text-align: center;
+    }
+  }
+
+  &-note_box {
+    text-align: center;
+    font-size: 12px;
+    color: #605D5E;
+
+    a {
+      color: #A4A3A3;
+    }
+  }
+
+  &_tagline {
+    margin: 0 0 15px;
+
+    text-align: center;
+    color: #A4A3A3;
+  }
+
+  &-pass_box {
+    padding: 15px 0 0;
+
+    text-align: center;
+
+    a {
+      color: #E4285B;
+    }
+  }
+}
+
+.js-ag-popup-form_forgot {
+  font-size: 14px;
+  color: #A4A3A3;
+
+  position: absolute;
+  top: 10px;
+  right: 20px;
+
+  &:hover {
+    text-decoration: none;
+    color: #5A5858;
+  }
+}

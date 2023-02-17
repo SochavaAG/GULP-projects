@@ -1,22 +1,23 @@
 @import 'base/reset';
 @import 'base/mixins';
-@import 'base/vars';
 
-@import 'base/main';
+@import 'site/vars';
+@import 'site/main';
+@import 'site/fonts';
+@import 'site/grid';
 
-@import 'base/fonts';
-@import 'base/grid';
+@import '../components/main';
 
-@import 'base/common';
-
-//@import '../components/main';
+@import 'site/common';
 
 // add blocks
-//@import '/pages/common/header/header';
+@import '../page-components/common/header/header';
+@import '../page-components/common/filter/filter';
 //@import '../pages/common/menu/menu';
 
 //@import '../pages/other/main';
 
-//@import '../pages/common/footer/footer';
-//@import '../pages/common/svg/svg-sprite';
+@import '../page-components/common/footer/footer';
+@import '../page-components/common/svg-sprite/svg-sprite';
+@import '../page-components/common/popup/popup';
 // /add blocks

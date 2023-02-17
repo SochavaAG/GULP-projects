@@ -1,0 +1,4 @@
+@include font(#{$fontFamily}, #{$fontFamily}-Bold, bold);
+@include font(#{$fontFamily}, #{$fontFamily}-Heavy, 900);
+@include font(#{$fontFamily}, #{$fontFamily}-Medium, 500);
+@include font(#{$fontFamily}, #{$fontFamily}-Regular);

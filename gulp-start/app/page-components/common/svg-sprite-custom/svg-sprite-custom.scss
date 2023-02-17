@@ -1,0 +1,109 @@
+.svg {
+    &-search_btn {
+        height: 18px;
+        width: 18px;
+
+        stroke: #5A5858;
+        fill: transparent;
+
+        .ag-header-search_btn:hover & {
+            stroke: #FFF;
+        }
+    }
+
+    &-login {
+        height: 16px;
+        width: 14px;
+        margin: 0 5px -2px 0;
+
+        stroke: #FFF;
+
+        .ag-login_link:hover & {
+            stroke: #5A5858;
+        }
+    }
+
+    &-star {
+        height: 16px;
+        width: 16px;
+        margin: 0 auto;
+
+        stroke: #FFF;
+    }
+
+    &-clock {
+        height: 16px;
+        width: 16px;
+        margin: 0 auto;
+
+        stroke: #FFF;
+    }
+    &-message {
+        height: 16px;
+        width: 16px;
+        margin: 0 auto;
+
+        stroke: #FFF;
+    }
+
+    &-arrow {
+        height: 4px;
+        width: 8px;
+        margin: -2px 0 0;
+
+        stroke: #FFF;
+
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        .js-ag-footer-middle_title__active & {
+            transform: scaleY(-1);
+        }
+    }
+
+    &-filter {
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        margin: 0 7px 0 0;
+
+        vertical-align: text-top;
+
+        stroke: #FFF;
+        fill: transparent;
+    }
+
+    &-more {
+        height: 4px;
+        width: 16px;
+        margin: 0 0 3px;
+
+        fill: #A19FA0;
+
+        .js-ag-tag-search_item__more:hover & {
+            fill: #FFF;
+        }
+    }
+
+    &-grid {
+        &-4, &-9, &-16 {
+            height: 16px;
+            width: 16px;
+
+            fill: #5A5858;
+        }
+        .js-ag-grid-btn_item__active &,
+        .ag-grid-btn_item:hover &-4,
+        .ag-grid-btn_item:hover &-9,
+        .ag-grid-btn_item:hover &-16 {
+            fill: #FFF;
+        }
+    }
+
+    &-gl {
+        height: 18px;
+        width: 18px;
+        margin: 0 10px -3px 0;
+    }
+}
